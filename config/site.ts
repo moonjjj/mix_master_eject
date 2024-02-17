@@ -1,69 +1,51 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+  name: "MixMaster AU",
+  description: "호주믹스마스터 공략사이트입니다.",
+  navItems: [
     {
-      label: "Docs",
-      href: "/docs",
+      label: "홈",
+      href: "/",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "계산기",
+      href: "/mix_calculate",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "게시판",
+      href: "/board",
     },
     {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
-	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
-	},
+      label: "주요링크",
+      href: "/link",
+    },
+  ],
+  navMenuItems: [
+    {
+      label: "홈",
+      href: "/",
+    },
+    {
+      label: "계산기",
+      href: "/mix_calculate",
+    },
+    {
+      label: "게시판",
+      href: "/board",
+    },
+    {
+      label: "주요링크",
+      href: "/link",
+    },
+  ],
+  links: {
+    github: "https://github.com/moonjjj",
+    twitter: "https://twitter.com/getnextui",
+    docs: "https://nextui.org",
+    discord: "https://discord.gg/9b6yyZKmH4",
+    sponsor: "https://patreon.com/jrgarciadev",
+    cafe: "https://cafe.naver.com/mixmasterau",
+    download: "https://global.playmixmaster.com/download",
+  },
 };
