@@ -78,6 +78,7 @@ export default function DocsPage() {
                       showAnchorIcon
                       href={elem.url}
                       color="foreground"
+                      isExternal
                     >
                       <h4 className="text-medium font-medium">{elem.title}</h4>
                       <p className="text-small text-default-400 mx-3">
