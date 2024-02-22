@@ -8,7 +8,6 @@ import { store, persistor } from "@/redux/store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { ThemeProviderProps } from "next-themes/dist/types";
 
 export function Providers({ children, themeProps }) {
   const router = useRouter();
