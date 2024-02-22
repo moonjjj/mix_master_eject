@@ -156,7 +156,10 @@ export const Calculator = () => {
             </div>
           ) : (
             result.map((item, index) => (
-              <div className="flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	">
+              <div
+                key={index}
+                className="flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	"
+              >
                 <div>
                   <div className="flex">
                     <span title="메인코어 현재값" className="flex items-end">

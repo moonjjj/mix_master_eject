@@ -13,7 +13,7 @@ export const TestList = ({ list }) => {
     <>
       {list.map((elem: any, idx: any) => {
         return (
-          <div>
+          <div key={idx}>
             <span className="text-blue-900">{elem.title}</span>
             <span>{elem.content}</span>
           </div>

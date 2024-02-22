@@ -47,7 +47,8 @@ export const Youtube = () => {
             // width: 80vw;position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);
             // <div className="relative top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] w-80vw">
             <div
-            // className="sm:h-0 pb-[56.25%] relative w-full"
+              // className="sm:h-0 pb-[56.25%] relative w-full"
+              key={idx}
             >
               <ReactPlayer
                 url={elem.url}
