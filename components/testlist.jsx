@@ -11,7 +11,7 @@ export const TestList = ({ list }) => {
     //   Count is {count} {results[0].title} d
     // </Button>
     <>
-      {list.map((elem: any, idx: any) => {
+      {list.map((elem, idx) => {
         return (
           <div key={idx}>
             <span className="text-blue-900">{elem.title}</span>
