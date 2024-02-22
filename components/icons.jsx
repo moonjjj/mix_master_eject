@@ -1,12 +1,6 @@
 import * as React from "react";
-import { IconSvgProps } from "@/types";
 
-export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
-  width,
-  height,
-  ...props
-}) => (
+export const Logo = ({ size = 36, width, height, ...props }) => (
   <svg
     fill="none"
     height={size || height}
@@ -23,12 +17,7 @@ export const Logo: React.FC<IconSvgProps> = ({
   </svg>
 );
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
+export const DiscordIcon = ({ size = 24, width, height, ...props }) => {
   return (
     <svg
       height={size || height}
@@ -44,12 +33,7 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({
   );
 };
 
-export const TwitterIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
+export const TwitterIcon = ({ size = 24, width, height, ...props }) => {
   return (
     <svg
       height={size || height}
@@ -65,12 +49,7 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
   );
 };
 
-export const GithubIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
+export const GithubIcon = ({ size = 24, width, height, ...props }) => {
   return (
     <svg
       height={size || height}
@@ -88,12 +67,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
   );
 };
 
-export const MoonFilledIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IconSvgProps) => (
+export const MoonFilledIcon = ({ size = 24, width, height, ...props }) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -110,12 +84,7 @@ export const MoonFilledIcon = ({
   </svg>
 );
 
-export const SunFilledIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IconSvgProps) => (
+export const SunFilledIcon = ({ size = 24, width, height, ...props }) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -132,12 +101,7 @@ export const SunFilledIcon = ({
   </svg>
 );
 
-export const HeartFilledIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IconSvgProps) => (
+export const HeartFilledIcon = ({ size = 24, width, height, ...props }) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -157,7 +121,7 @@ export const HeartFilledIcon = ({
   </svg>
 );
 
-export const SearchIcon = (props: IconSvgProps) => (
+export const SearchIcon = (props) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -185,7 +149,7 @@ export const SearchIcon = (props: IconSvgProps) => (
   </svg>
 );
 
-export const NextUILogo: React.FC<IconSvgProps> = (props) => {
+export const NextUILogo = (props) => {
   const { width, height = 40 } = props;
 
   return (
@@ -213,12 +177,7 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
   );
 };
 
-export const CheckIcon = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}: IconSvgProps) => {
+export const CheckIcon = ({ size = 24, width, height, ...props }) => {
   return (
     <svg
       width={size || width || 24}
