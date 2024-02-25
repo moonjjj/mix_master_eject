@@ -11,9 +11,40 @@ import {
   Radio,
   Table,
   TableHeader,
+  Avatar,
 } from "@nextui-org/react";
 import Switchs from "@/components/switch";
+import { WriteButton } from "@/components/button/writeButton";
+import { HowToWriteButton } from "@/components/button/howToWriteButton";
 
+const list = {
+  forStarter: [
+    {
+      icon: "공략",
+      title: "돈 버는 팁입니다",
+      time: "2022-12-20",
+      url: "",
+    },
+    {
+      icon: "정보",
+      title: "정보 공유합니다!",
+      time: "2022-12-20",
+      url: "",
+    },
+    {
+      icon: "자유",
+      title: "자유롭게 아무거나 써볼까요",
+      time: "2020-02-02",
+      url: "https://discord.com/",
+    },
+    {
+      icon: "기타",
+      title: "아무 내용이나 좋아요 ~ !",
+      subTitle: "2020-02-02",
+      url: "",
+    },
+  ],
+};
 const animals = [
   {
     label: "Cat",
@@ -96,7 +127,7 @@ export default async function BoardPage() {
           <div className="space-y-1 flex justify-center flex-col items-start">
             <h4 className="text-medium font-medium">게시판</h4>
             <p className="text-small text-default-400">
-              모든 게시물은 네이버카페와 연결됩니다.
+              모든 게시물은 네이버 호믹 공식카페와 연결됩니다.
             </p>
           </div>
           {/* <TestList list={result} /> */}
@@ -135,10 +166,8 @@ export default async function BoardPage() {
               />
             </div>
             <div className="flex gap-4">
-              <Button className="cursor-pointer" color="primary">
-                글쓰기
-              </Button>
-              <Button className="cursor-pointer">글쓰는 방법</Button>
+              <WriteButton />
+              <HowToWriteButton />
             </div>
           </div>
           <div className="my-4 flex items-center space-x-4 text-small justify-between">
@@ -150,19 +179,50 @@ export default async function BoardPage() {
             >
               <Radio value="1">전체보기</Radio>
               <Divider orientation="vertical" className="mx-1" />
-              <Radio value="2">💲 돈버는 팁</Radio>
+              <Radio value="2">공략</Radio>
               <Divider orientation="vertical" className="mx-1" />
-              <Radio value="3">📈 육성 팁</Radio>
+              <Radio value="3">정보</Radio>
               <Divider orientation="vertical" className="mx-1" />
-              <Radio value="4">💬 자유대화</Radio>
+              <Radio value="4">자유</Radio>
               <Divider orientation="vertical" className="mx-1" />
-              <Radio value="5">🎸 기타</Radio>
+              <Radio value="5">기타</Radio>
             </RadioGroup>
             <Switchs />
           </div>
           <Divider className="my-4" />
 
-          <div></div>
+          <div>
+            {list.forStarter.map((elem, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className="cursor-pointer flex items-center py-3 px-1 pr-10 transition-all rounded-md border-b-1 border-slate-800		 hover:bg-[#3f3f46]"
+                >
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center gap-3">
+                      <Avatar
+                        showFallback
+                        name={elem.icon}
+                        size="lg"
+                        className="text-sm"
+                      />
+                      <div className="flex gap-3 items-end">
+                        <span className="text-2xl font-medium">
+                          {elem.title}
+                        </span>
+                        <span className="text-sm text-slate-500	">
+                          {elem.time}
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <Button color="primary">바로가기</Button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

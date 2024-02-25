@@ -25,6 +25,7 @@ import {
   DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
+  CheckIcon,
 } from "@/components/icons";
 
 // import { Logo } from "@/components/icons";
@@ -104,11 +105,11 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
+            href="https://global.playmixmaster.com/"
+            startContent={<span>🚀</span>}
             variant="flat"
           >
-            Sponsor
+            호믹 공홈
           </Button>
         </NavbarItem>
       </NavbarContent>

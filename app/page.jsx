@@ -22,46 +22,44 @@ export default function Home() {
         <h1 className={title({ color: "yellow" })}>호주믹스마스터&nbsp;</h1>
         <br />
         <h1 className={title()}>공략사이트입니다.</h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
+        {/* <h2 className={subtitle({ class: "mt-4" })}>
           더 많은 정보를 주기위해
           <br />
           노력하겠습니다.
-        </h2>
+        </h2> */}
+        <div className="mt-8">
+          <Snippet hideSymbol hideCopyButton variant="flat">
+            <span>
+              <Code color="primary">공지</Code>호믹호믹 리뉴얼 ❗️
+            </span>
+          </Snippet>
+        </div>
       </div>
 
       <div className="flex gap-3">
         <Link
-          isExternal
-          href={siteConfig.links.download}
+          href="/link"
           className={buttonStyles({
             color: "primary",
             radius: "full",
-            variant: "shadow",
+            variant: "bordered",
           })}
         >
           <img src="../mix_logo.png" width={20} />
-          게임 다운로드
+          처음 시작하신다면 ?
         </Link>
         <Link
           isExternal
           className={buttonStyles({
             variant: "bordered",
-            color: "primary",
+            color: "success",
             radius: "full",
           })}
           href={siteConfig.links.cafe}
         >
           <img src="../naver_logo.png" width={20} />
-          호믹 카페
+          호믹 공식 카페
         </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideSymbol hideCopyButton variant="flat">
-          <span>
-            <Code color="danger">좌측 상단</Code>의 네비게이션으로 이동해보세요
-          </span>
-        </Snippet>
       </div>
 
       {/* test */}
