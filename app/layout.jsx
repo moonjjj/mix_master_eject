@@ -21,6 +21,7 @@ export const metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+  naverVerification: "061c882ab10ff10185fd0201e48f190446637aa8",
 };
 
 export default function RootLayout({ children }) {

@@ -12,8 +12,9 @@ import {
   ModalBody,
   ModalFooter,
   Textarea,
+  Divider,
 } from "@nextui-org/react";
-import { CheckIcon, SearchIcon } from "@/components/icons";
+import { CheckIcon, Logo, ReportIcon, SearchIcon } from "@/components/icons";
 import ReportModal from "./modal/reportModal";
 import { attach } from "@/redux/slice/calculateSlice";
 import { useSelector, useDispatch } from "react-redux";
@@ -51,6 +52,7 @@ export const Calculator = () => {
     subMax: "",
     result: "",
     time: "",
+    name: "",
   };
 
   const [level, setLevel] = useState(initialLevel);
@@ -191,8 +193,12 @@ export const Calculator = () => {
                     </span>
                   </div>
                 </div>
-                <div>
+                <div className="flex gap-1">
+                  {item?.name && (
+                    <Button variant="bordered">{item?.name}</Button>
+                  )}
                   <Button
+                    isIconOnly
                     className="cursor-pointer"
                     onClick={() => {
                       setReportValue(item);
@@ -200,9 +206,9 @@ export const Calculator = () => {
                     }}
                     onPress={onOpen}
                   >
-                    신고하기
+                    <ReportIcon />
                   </Button>
-                  <p>{item?.time}</p>
+                  {/* <p>{item?.time}</p> */}
                 </div>
               </div>
             ))
@@ -210,7 +216,31 @@ export const Calculator = () => {
           <AlwaysScrollToBottom />
         </div>
       </ScrollShadow>
+      <Divider className="mb-5" />
       <div>
+        {/* <div className="flex w-full flex-wrap flex-col mb-6 md:flex-nowrap mb-6 md:mb-0 gap-4">
+          <Input
+            size="sm"
+            type="number"
+            label="메인코어 현재레벨"
+            placeholder="현재레벨을 입력해주세요."
+            ref={inputRefs.input1}
+            onChange={(e) =>
+              setLevel({ ...level, mainCurrent: Number(e.target.value) })
+            }
+          />
+        </div> */}
+        <div className="flex w-full flex-wrap flex-col md:flex-nowrap mb-6 md:mb-4 gap-4">
+          <Input
+            size="md"
+            type="text"
+            label="결과 코어 이름"
+            placeholder="저장용 이름입니다. (선택입력)"
+            maxLength={10}
+            ref={inputRefs.input1}
+            onChange={(e) => setLevel({ ...level, name: e.target.value })}
+          />
+        </div>
         <div className="flex gap-5">
           <div className="flex w-full flex-wrap flex-col md:flex-nowrap mb-6 md:mb-0 gap-4">
             <Input
