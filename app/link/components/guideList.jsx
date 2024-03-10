@@ -16,6 +16,12 @@ const list = {
       url: "https://cafe.naver.com/mixmasterau",
     },
     {
+      icon: "🔥",
+      title: "브레스 신규 호믹카페",
+      subTitle: "BJ 브레스님이 운영하는 네이버 카페입니다.",
+      url: "https://cafe.naver.com/blade",
+    },
+    {
       icon: "👾",
       title: "호믹 디스코드",
       subTitle:
@@ -169,7 +175,7 @@ export const GuideList = () => {
               호주믹스마스터는 예전 믹스마스터의 느낌이 있고, 템을 제작하는
               재미가 있고,
             </Code>
-            <Code size="md">PVP가 하는 재미가 있는 게임이라고 생각합니다.</Code>
+            <Code size="md">PVP 하는 재미가 있는 게임이라고 생각합니다.</Code>
             <Code size="md">
               {" "}
               예전 향수를 잠시 느낀다고 생각하며 가볍게 시작하시는 것을

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "@/styles/globals.css";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -27,7 +28,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <Head>
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description} />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

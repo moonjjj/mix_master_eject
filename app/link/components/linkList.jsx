@@ -76,6 +76,16 @@ export const LinkList = () => {
             호믹 카페
           </Link>
           <Divider orientation="vertical" />
+          <Link
+            isBlock
+            isExternal
+            showAnchorIcon
+            href="https://cafe.naver.com/blade"
+            color="foreground"
+          >
+            브레스님 호믹 카페
+          </Link>
+          <Divider orientation="vertical" />
           <Tooltip content="본믹카페에도 해외믹마 정보가 있어요 !">
             <Link
               isBlock
