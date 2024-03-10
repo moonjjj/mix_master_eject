@@ -5,7 +5,7 @@
   "browser": {},
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
