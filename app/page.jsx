@@ -64,8 +64,8 @@ export default function Home() {
 
       {/* test */}
       <div>
+        {/* <Code>더블클릭하여 전체화면으로 감상할 수 있습니다.</Code> */}
         <span>
-          관련영상
           <svg
             // id={styles.progress}
             width="45"
@@ -90,16 +90,32 @@ export default function Home() {
           </svg>
         </span>
         <Youtube />
-        <span>더블클릭하여 전체화면으로 감상할 수 있습니다.</span>
+
+        <br />
+
         <div>
-          <a href="https://developers.google.com/youtube/player_parameters?hl=ko">
+          <Link
+            isBlock
+            isExternal
+            showAnchorIcon
+            href="https://developers.google.com/youtube/player_parameters?hl=ko"
+            color="foreground"
+          >
             유튜브 플레이어 삽입 관련 조항
-          </a>
-          <a href="https://support.google.com/youtube/thread/185330430/%EC%9D%B8%EC%95%B1-embeddable-player-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%B0%8F-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A0%A8-%EB%AC%B8%EC%9D%98?hl=ko">
+          </Link>
+          <Link
+            isBlock
+            isExternal
+            showAnchorIcon
+            href="https://support.google.com/youtube/thread/185330430/%EC%9D%B8%EC%95%B1-embeddable-player-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%B0%8F-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A0%A8-%EB%AC%B8%EC%9D%98?hl=ko"
+            color="foreground"
+          >
             유튜브 플레이어 삽입 관련 조항2
-          </a>
-          <span>문의 : 좌측하단 이메일 참고</span>
+          </Link>
         </div>
+        <Code size="sm">
+          <span>문의 : 우측하단 채널톡</span>
+        </Code>
       </div>
     </section>
   );

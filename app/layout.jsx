@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import { Analytics } from "@/config/analytics";
 
 export const metadata = {
   title: {
@@ -29,10 +30,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
+        {/* 네이버 */}
         <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title.default} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.icons.icon} />
+        <meta
+          name="naver-site-verification"
+          content={metadata.naverVerification}
+        />
+
         {/* Add other meta tags, link tags, etc. as needed */}
       </Head>
+      {/* 구글 */}
+      <Analytics />
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

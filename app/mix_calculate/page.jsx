@@ -13,17 +13,17 @@ import { Calculator } from "@/components/calculator";
 // import { AcmeLogo } from "./AcmeLogo.jsx";
 
 const mixLink = [
-  {
-    title: "믹스계산기 (호주 공홈)",
-    desc: "믹스레벨을 미리 계산해 볼 수 있습니다.",
-    url: "https://mixtree.cc/",
-    color: "",
-    divider: false,
-  },
+  // {
+  //   title: "믹스계산기 (호주 공홈)",
+  //   desc: "믹스레벨을 미리 계산해 볼 수 있습니다.",
+  //   url: "https://mixtree.cc/",
+  //   color: "",
+  //   divider: false,
+  // },
   {
     title: "믹스공식 (호주 공홈)",
     desc: "믹스공식 표를 제공합니다. ",
-    url: "https://global.playmixmaster.com/database/?module=data",
+    url: "https://global.playmixmaster.com/database/monsterlist-table",
     color: "",
     divider: false,
   },
