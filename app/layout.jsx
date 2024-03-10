@@ -47,9 +47,9 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content={metadata.icons.icon} />
 
         {/* Add other meta tags, link tags, etc. as needed */}
-        <Analytics />
       </Head>
       {/* 구글 */}
+      {/* <Analytics /> */}
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
