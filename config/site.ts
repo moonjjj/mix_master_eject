@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "MixMaster AU : 호믹호믹",
-  description: "호주믹스마스터 공략사이트입니다.",
+  description:
+    "호주믹스마스터 공략사이트입니다. | 호믹호믹 | 호주믹마 | 해외믹마 | 믹마 | 믹스마스터",
   navItems: [
     {
       label: "홈",

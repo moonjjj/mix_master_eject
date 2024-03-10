@@ -33,7 +33,7 @@ export const HowToWriteButton = () => {
         isOpen={isOpen}
         size="2xl"
         onOpenChange={onOpenChange}
-        className="max-h-[600px] overflow-scroll"
+        className="max-w-[300px] lg: max-w-[600px] max-h-[600px] overflow-scroll"
       >
         <ModalContent>
           {(onClose) => (

@@ -76,7 +76,7 @@ const list = {
 export const GuideList = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex gap-2 flex-wrap flex-col mx-7 my-5 w-full">
+      <div className="flex gap-2 flex-wrap flex-col mx-0 my-5 w-full lg:mx-7">
         <p className="text-left font-sans text-sm mx-2 mb-3">시작</p>
         {list.forStarter.map((elem, idx) => {
           return (
@@ -96,7 +96,9 @@ export const GuideList = () => {
               />
               <div className="flex gap-3 items-end">
                 <span className="text-2xl font-medium">{elem.title}</span>
-                <span className="text-sm text-slate-500	">{elem.subTitle}</span>
+                <span className="hidden lg:block text-sm text-slate-500	">
+                  {elem.subTitle}
+                </span>
               </div>
             </Link>
           );
@@ -121,7 +123,9 @@ export const GuideList = () => {
               />
               <div className="flex gap-3 items-end">
                 <span className="text-2xl font-medium">{elem.title}</span>
-                <span className="text-sm text-slate-500	">{elem.subTitle}</span>
+                <span className="hidden lg:block text-sm text-slate-500	">
+                  {elem.subTitle}
+                </span>
               </div>
             </Link>
           );
@@ -146,18 +150,20 @@ export const GuideList = () => {
               />
               <div className="flex gap-3 items-end">
                 <span className="text-2xl font-medium">{elem.title}</span>
-                <span className="text-sm text-slate-500	">{elem.subTitle}</span>
+                <span className="hidden lg:block text-sm text-slate-500	">
+                  {elem.subTitle}
+                </span>
               </div>
             </Link>
           );
         })}
         <Divider />
-        <div className="mx-5 mt-10 flex items-start flex-col">
+        <div className="mx-5 mt-10 flex items-start flex-col  w-full overflow-scroll">
           <Code size="lg" className="mb-5 font-bold">
             시작해보고 싶은데 어떻게 시작해야 되나요?
           </Code>
 
-          <div className="flex flex-col gap-2 items-start">
+          <div className="flex flex-col gap-2 items-start text-small">
             <Code size="md">제일 많이 받았던 질문이였습니다.</Code>
             <Code size="md">
               포털사이트에 호주믹스마스터를 검색해도 정보가 나오지 않고,

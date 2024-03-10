@@ -104,7 +104,9 @@ export const BoardList = ({ lists }) => {
         >
           <Radio value="전체보기">전체보기</Radio>
           <Divider orientation="vertical" className="mx-1" />
-          <Radio value="공략">공략</Radio>
+          <Radio value="공략" className="text-small lg:text-lg">
+            공략
+          </Radio>
           <Divider orientation="vertical" className="mx-1" />
           <Radio value="정보">정보</Radio>
           <Divider orientation="vertical" className="mx-1" />
@@ -120,7 +122,7 @@ export const BoardList = ({ lists }) => {
           list.map((elem, idx) => (
             <div
               key={idx}
-              className="cursor-pointer flex items-center py-3 px-1 pr-10 transition-all rounded-md border-b-1 border-slate-800 hover:bg-[#3f3f46]"
+              className="cursor-pointer flex items-center py-3 px-1 transition-all rounded-md border-b-1 border-slate-800 hover:bg-[#3f3f46] lg:pr-10"
             >
               <div className="flex items-center justify-between w-full">
                 <div className="flex items-center gap-3">
@@ -130,8 +132,10 @@ export const BoardList = ({ lists }) => {
                     size="lg"
                     className="text-sm"
                   />
-                  <div className="flex gap-3 items-end">
-                    <span className="text-2xl font-medium">{elem.title}</span>
+                  <div className="flex flex-col gap-3 items-start justify-start lg:flex-row">
+                    <span className="text-base lg: text-2xl font-medium">
+                      {elem.title}
+                    </span>
                     <span className="text-sm text-slate-500">{elem.date}</span>
                   </div>
                 </div>

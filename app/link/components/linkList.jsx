@@ -2,9 +2,9 @@ import { Divider, Link, Tooltip } from "@nextui-org/react";
 
 export const LinkList = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col lg:flex-row">
       <div className="flex gap-2 flex-wrap mx-7 my-5">
-        <div className="flex gap-3 mb-6">
+        <div className="flex flex-col lg:flex-row gap-3 mb-6">
           <Link
             isBlock
             isExternal
@@ -14,7 +14,7 @@ export const LinkList = () => {
           >
             호주 믹스마스터 공식홈페이지
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -24,7 +24,7 @@ export const LinkList = () => {
           >
             상점
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -34,7 +34,7 @@ export const LinkList = () => {
           >
             믹스공식
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -44,7 +44,7 @@ export const LinkList = () => {
           >
             이벤트
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -54,7 +54,7 @@ export const LinkList = () => {
           >
             다운로드
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -65,7 +65,8 @@ export const LinkList = () => {
             회원가입
           </Link>
         </div>
-        <div className="flex gap-3">
+        <Divider className="mb-6" />
+        <div className="flex flex-col lg:flex-row gap-3">
           <Link
             isBlock
             isExternal
@@ -75,7 +76,7 @@ export const LinkList = () => {
           >
             호믹 카페
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Link
             isBlock
             isExternal
@@ -85,7 +86,7 @@ export const LinkList = () => {
           >
             브레스님 호믹 카페
           </Link>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Tooltip content="본믹카페에도 해외믹마 정보가 있어요 !">
             <Link
               isBlock
@@ -97,7 +98,7 @@ export const LinkList = () => {
               본믹 카페
             </Link>
           </Tooltip>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Tooltip content="족보 참고하기 좋은 사이트입니다.">
             <Link
               isBlock
@@ -109,7 +110,7 @@ export const LinkList = () => {
               믹스트리
             </Link>
           </Tooltip>
-          <Divider orientation="vertical" />
+          {/* <Divider orientation="vertical" /> */}
           <Tooltip content="믹스 레벨 계산기입니다. (출처 : fokerface님)">
             <Link
               isBlock

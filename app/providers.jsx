@@ -9,6 +9,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Script from "next/script";
+import { Analytics } from "@/config/analytics";
 
 export function Providers({ children, themeProps }) {
   const router = useRouter();
@@ -20,6 +21,8 @@ export function Providers({ children, themeProps }) {
           <NextUIProvider navigate={router.push}>
             <NextThemesProvider {...themeProps}>
               {children}
+              {/* 빌드 안 되면 제거 - analytics */}
+              {/* <Analytics /> */}
               <Script
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{

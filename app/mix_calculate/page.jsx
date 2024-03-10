@@ -60,12 +60,12 @@ export default function DocsPage() {
           </p>
         </div>
         <Divider className="my-4" />
-        <div className="flex items-center space-x-4 text-small">
-          <div className="w-1/2">
+        <div className="flex flex-col space-x-30 items-center space-x-4  text-small lg:flex-row justify-center">
+          <div className="w-11/12 lg:w-1/2">
             <Calculator />
           </div>
           <Divider orientation="vertical" />
-          <div className="w-1/2 h-[672px]">
+          <div className="w-11/12 lg:w-1/2 h-[672px]">
             <div className="flex flex-col gap-2 flex-wrap">
               <p className="text-small text-default-600 ml-1 text-left">
                 관련링크
@@ -79,6 +79,7 @@ export default function DocsPage() {
                       href={elem.url}
                       color="foreground"
                       isExternal
+                      // className="flex flex-col items-start"
                     >
                       <h4 className="text-medium font-medium">{elem.title}</h4>
                       <p className="text-small text-default-400 mx-3">

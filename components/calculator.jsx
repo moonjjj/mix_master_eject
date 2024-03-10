@@ -151,7 +151,7 @@ export const Calculator = () => {
         <div>
           {/* 계산 결과 */}
 
-          {result.length === 0 ? (
+          {result.length === 0 || result === undefined ? (
             <div className="text-medium font-medium mt-5">
               아직 믹스 레벨 계산한 내역이 없습니다. <br />
               아래의 계산기를 사용하여 믹스해보세요.
@@ -160,35 +160,42 @@ export const Calculator = () => {
             result.map((item, index) => (
               <div
                 key={index}
-                className="flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	"
+                className="overflow-scroll gap-5 flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	"
               >
                 <div>
                   <div className="flex">
                     <span title="메인코어 현재값" className="flex items-end">
-                      <span className="text-2xl font-medium">
+                      <span className="text-xl lg:text-2xl font-medium">
                         {item.mainCurrent}
                       </span>
                       <span
                         title="메인코어 최대값"
-                        className="text-small text-default-400 ml-1"
+                        className="text-sm lg:text-small text-default-400 ml-1"
                       >
                         {item.mainMax}
                       </span>
                     </span>
-                    <span className="text-3xl font-medium mx-2">+</span>
+                    <span className="text-sm flex items-end lg:text-3xl font-medium mx-2">
+                      +
+                    </span>
                     <span title="서브코어 현재값" className="flex items-end">
-                      <span className="text-2xl font-medium">
+                      <span className="text-xl lg:text-2xl font-medium">
                         {item.subCurrent}
                       </span>
                       <span
                         title="메인코어 최대값"
-                        className="text-small text-default-400 ml-1"
+                        className="text-sm lg:text-small text-default-400 ml-1"
                       >
                         {item.subMax}
                       </span>
                     </span>
-                    <span className="text-3xl font-medium mx-2">=</span>
-                    <span title="결과값" className="text-3xl font-bold">
+                    <span className="text-sm flex items-end lg:text-3xl font-medium mx-2">
+                      =
+                    </span>
+                    <span
+                      title="결과값"
+                      className="text-xl flex items-end lg:text-3xl font-bold"
+                    >
                       {item.result}
                     </span>
                   </div>

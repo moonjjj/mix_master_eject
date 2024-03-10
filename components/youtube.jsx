@@ -40,16 +40,13 @@ export const Youtube = () => {
   }, []);
 
   return (
-    <div className="flex overflow-scroll pb-10 max-w-7xl gap-4 flex-col items-start sm:flex-row gap-10">
+    <div className="flex overflow-scroll pb-10 max-w-7xl gap-4 flex-col items-start sm:flex-row gap-10 items-center">
       {mounted &&
         youtubeLink.map((elem, idx) => {
           return (
             // width: 80vw;position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);
             // <div className="relative top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] w-80vw">
-            <div
-              // className="sm:h-0 pb-[56.25%] relative w-full"
-              key={idx}
-            >
+            <div className="sm:flex items-center flex-col" key={idx}>
               <ReactPlayer
                 url={elem.url}
                 // className="pb-1"
@@ -62,8 +59,10 @@ export const Youtube = () => {
                 // style={{ position: "absolute", top: 0, left: 0 }}
               />
               {/* <div className={styles.youtube_desc}> */}
-              <a className="text-sm	font-bold">{elem.name}</a>
-              <a className="text-xs font-light ml-2">{elem.sourceBy}</a>
+              <div className="w-[360px]">
+                <a className="text-sm	font-bold">{elem.name}</a>
+                <a className="text-xs font-light ml-2">{elem.sourceBy}</a>
+              </div>
             </div>
             // </div>
             // </div>
