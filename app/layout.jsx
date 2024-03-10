@@ -24,6 +24,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   naverVerification: "061c882ab10ff10185fd0201e48f190446637aa8",
+  googleVerification: "E7qaacgjDgcBw1R26pBmFLz5coNPPXcDIPRh",
 };
 
 export default function RootLayout({ children }) {
@@ -32,19 +33,23 @@ export default function RootLayout({ children }) {
       <Head>
         {/* 네이버 */}
         <title>{metadata.title.default}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title.default} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.icons.icon} />
         <meta
           name="naver-site-verification"
           content={metadata.naverVerification}
         />
+        <meta
+          name="google-site-verification"
+          content={metadata.googleVerification}
+        />
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title.default} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.icons.icon} />
 
         {/* Add other meta tags, link tags, etc. as needed */}
+        <Analytics />
       </Head>
       {/* 구글 */}
-      <Analytics />
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

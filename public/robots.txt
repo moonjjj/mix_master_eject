@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mixmasterau.vercel.app
+
+# Sitemaps
+Sitemap: https://mixmasterau.vercel.app/sitemap.xml
