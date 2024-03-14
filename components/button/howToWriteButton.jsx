@@ -29,11 +29,12 @@ export const HowToWriteButton = () => {
       >
         글쓰는 방법
       </Button>
+
       <Modal
         isOpen={isOpen}
-        size="2xl"
+        // size="2xl"
         onOpenChange={onOpenChange}
-        className="max-w-[300px] lg: max-w-[600px] max-h-[600px] overflow-scroll"
+        className="max-w-[300px] absolute top-0  lg:relative max-w-[600px] max-h-[600px] overflow-scroll"
       >
         <ModalContent>
           {(onClose) => (
@@ -67,7 +68,6 @@ export const HowToWriteButton = () => {
                     <br />
                     불편하더라도 양해 부탁드립니다..!
                   </Code>
-                  {/* <Code size="md"></Code> */}
                 </div>
               </ModalBody>
               <ModalFooter>

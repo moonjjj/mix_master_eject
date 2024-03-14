@@ -129,7 +129,12 @@ export const WriteButton = () => {
       >
         글쓰기
       </Button>
-      <Modal isOpen={isOpen} size="xl" onOpenChange={onOpenChange}>
+      <Modal
+        isOpen={isOpen}
+        size="xl"
+        onOpenChange={onOpenChange}
+        className="max-w-[300px] absolute top-0  lg:relative max-w-[600px] max-h-[600px] overflow-scroll"
+      >
         <ModalContent>
           {(onClose) => (
             <>
