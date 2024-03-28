@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,7 +8,15 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@nextui-org/react";
+
+// import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
@@ -28,32 +37,27 @@ import {
   CheckIcon,
 } from "@/components/icons";
 
-// import { Logo } from "@/components/icons";
-// import { MixLogo } from "@/public/mix_logo.png";
-
-import Logo from "../public/mix_logo.png";
-
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+  // const searchInput = (
+  //   <Input
+  //     aria-label="Search"
+  //     classNames={{
+  //       inputWrapper: "bg-default-100",
+  //       input: "text-sm",
+  //     }}
+  //     endContent={
+  //       <Kbd className="hidden lg:inline-block" keys={["command"]}>
+  //         K
+  //       </Kbd>
+  //     }
+  //     labelPlacement="outside"
+  //     placeholder="Search..."
+  //     startContent={
+  //       <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+  //     }
+  //     type="search"
+  //   />
+  // );
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
@@ -99,9 +103,9 @@ export const Navbar = () => {
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
         <NavbarItem className="hidden md:flex">
-          <Button
+          {/* <Button
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
@@ -110,7 +114,7 @@ export const Navbar = () => {
             variant="flat"
           >
             호믹 공홈
-          </Button>
+          </Button> */}
         </NavbarItem>
       </NavbarContent>
 
@@ -119,10 +123,10 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        {/* <NavbarMenuToggle /> */}
       </NavbarContent>
 
-      <NavbarMenu>
+      {/* <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
@@ -133,7 +137,32 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
-      </NavbarMenu>
+      </NavbarMenu> */}
+      <Dropdown>
+        <DropdownTrigger>
+          {/* <Button variant="bordered">패치노트</Button> */}
+          <NavbarMenuToggle />
+        </DropdownTrigger>
+        <DropdownMenu aria-label="Static Actions">
+          {/* <DropdownItem key="new">준비중입니다.</DropdownItem> */}
+          {siteConfig.navMenuItems.map((item, index) => (
+            <DropdownItem key={`${item}-${index}`}>
+              <Link
+                color={"foreground"}
+                href={item.href}
+                size="lg"
+                className="w-full"
+              >
+                {item.label}
+              </Link>
+            </DropdownItem>
+          ))}
+
+          {/* <DropdownItem key="delete" className="text-danger" color="danger"> */}
+          {/* Delete file */}
+          {/* </DropdownItem> */}
+        </DropdownMenu>
+      </Dropdown>
     </NextUINavbar>
   );
 };

@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
+      <div className="flex flex-col lg:inline-block max-w-lg text-center justify-center">
         <h1 className={title()}>안녕하세요&nbsp;</h1>
         <h1 className={title({ color: "yellow" })}>호주믹스마스터&nbsp;</h1>
         <br />

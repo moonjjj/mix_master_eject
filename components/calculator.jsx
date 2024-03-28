@@ -25,6 +25,11 @@ export const Calculator = () => {
   const [reportPop, setReportPop] = useState(false);
   const [reportValue, setReportValue] = useState([]);
   const [bottom, setBottom] = useState(true);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const handleClick = () => {
+    setIsButtonClicked(true);
+  };
+
   const result = useSelector((state) => state.calculate.value);
   const dispatch = useDispatch();
   // useSelector
@@ -126,7 +131,8 @@ export const Calculator = () => {
     // setLevel({ ...level, result: result });
     setResultArray((prevArray) => [...prevArray, { ...level, result: result }]); // 여기에 원하는 항목 추가
     handleReset(); //reset
-    setBottom(true);
+    // setBottom(true);
+    setIsButtonClicked(true);
     attachResultFnc(level, result); //dispatch
   };
   const attachResultFnc = (level, result) => {
@@ -136,6 +142,7 @@ export const Calculator = () => {
   // 클릭할 때 마다 아래로
   const AlwaysScrollToBottom = () => {
     const elementRef = useRef();
+    console.log("------");
     useEffect(() => {
       if (bottom) {
         elementRef.current.scrollIntoView();
@@ -143,6 +150,27 @@ export const Calculator = () => {
       }
     }, [bottom]);
     return <div ref={elementRef} />;
+  };
+
+  // const [goingUp, setGoingUp] = useState(false);
+  // const [currentScroll, setCurrentScroll] = useState(-1);
+  // const onScroll = (e) => {
+  //   setBottom(false);
+  //   const currentScrollY = e.target.scrollTop;
+  //   if (prevScrollY.current < currentScrollY && goingUp) {
+  //     setGoingUp(false);
+  //   }
+  //   if (prevScrollY.current > currentScrollY && !goingUp) {
+  //     setGoingUp(true);
+  //   }
+  //   prevScrollY.current = currentScrollY;
+  //   setCurrentScroll(currentScrollY);
+  // };
+
+  // 포커스 되었을 때 아무 동작도 하지 않도록 합니다.
+  const handleFocus = (event) => {
+    setIsButtonClicked(false);
+    event.preventDefault();
   };
 
   return (
@@ -161,8 +189,9 @@ export const Calculator = () => {
               <div
                 key={index}
                 className="overflow-scroll gap-5 flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	"
+                // onScroll={onScroll}
               >
-                <div>
+                <div className="w-full">
                   <div className="flex">
                     <span title="메인코어 현재값" className="flex items-end">
                       <span className="text-xl lg:text-2xl font-medium">
@@ -220,7 +249,9 @@ export const Calculator = () => {
               </div>
             ))
           )}
-          <AlwaysScrollToBottom />
+          {isButtonClicked && (
+            <AlwaysScrollToBottom style={{ display: "none" }} />
+          )}
         </div>
       </ScrollShadow>
       <Divider className="mb-5" />
@@ -245,6 +276,7 @@ export const Calculator = () => {
             placeholder="저장용 이름입니다. (선택입력)"
             maxLength={10}
             ref={inputRefs.input1}
+            onFocus={handleFocus}
             onChange={(e) => setLevel({ ...level, name: e.target.value })}
           />
         </div>
@@ -256,6 +288,7 @@ export const Calculator = () => {
               label="메인코어 현재레벨"
               placeholder="현재레벨을 입력해주세요."
               ref={inputRefs.input1}
+              onFocus={handleFocus}
               onChange={(e) =>
                 setLevel({ ...level, mainCurrent: Number(e.target.value) })
               }
@@ -266,6 +299,7 @@ export const Calculator = () => {
               label="메인코어 최대레벨"
               placeholder="최대레벨을 입력해주세요."
               ref={inputRefs.input2}
+              onFocus={handleFocus}
               onChange={(e) =>
                 setLevel({ ...level, mainMax: Number(e.target.value) })
               }
@@ -278,6 +312,7 @@ export const Calculator = () => {
               label="서브코어 현재레벨"
               placeholder="현재레벨을 입력해주세요."
               ref={inputRefs.input3}
+              onFocus={handleFocus}
               onChange={(e) =>
                 setLevel({ ...level, subCurrent: Number(e.target.value) })
               }
@@ -288,6 +323,7 @@ export const Calculator = () => {
               label="서브코어 최대레벨"
               placeholder="최대레벨을 입력해주세요."
               ref={inputRefs.input4}
+              onFocus={handleFocus}
               onChange={(e) =>
                 setLevel({ ...level, subMax: Number(e.target.value) })
               }

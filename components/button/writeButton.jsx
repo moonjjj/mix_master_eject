@@ -39,6 +39,8 @@ const initialValue = {
   icon: "",
 };
 
+const pattern = /^https:\/\/cafe\.naver\.com\/(mixmasterau|blade)\/\d+$/;
+
 export const WriteButton = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [openCustomModal, setOpenCustomModal] = useState(false);
@@ -49,7 +51,7 @@ export const WriteButton = () => {
 
   const checkStringFormat = (inputString) => {
     // 정규표현식을 사용하여 주어진 형식에 맞는지 확인합니다.
-    const pattern = /^https:\/\/cafe\.naver\.com\/mixmasterau\/\d+$/;
+    // const pattern = /^https:\/\/cafe\.naver\.com\/(mixmasterau|blade)\/\d+$/;
 
     // 정규표현식에 맞는지 여부를 검사합니다.
     return pattern.test(inputString);
@@ -68,7 +70,7 @@ export const WriteButton = () => {
     // url 형식 확인
     if (!checkStringFormat(writeValue.url)) {
       return alert(
-        "글쓰는 방법을 참고해주세요!\nhttps://cafe.naver.com/mixmasterau/[게시물번호]\n형식의 글만 작성이 가능합니다!"
+        "글쓰는 방법을 참고해주세요!\nhttps://cafe.naver.com/mixmasterau/[게시물번호]\nhttps://cafe.naver.com/blade/[게시물번호]\n형식의 글만 작성이 가능합니다!"
       );
     }
     if (writeValue.icon === "" || writeValue.icon === undefined) {
@@ -96,6 +98,7 @@ export const WriteButton = () => {
         // onClose;
         setLoading(false);
         alert("글 작성에 성공했습니다!!");
+        window.location.reload();
         // router.push("/board");
       }
     } catch (error) {
@@ -107,8 +110,7 @@ export const WriteButton = () => {
 
   const [urlValue, setUrlValue] = useState("");
 
-  const validateUrl = (value) =>
-    value.match(/^https:\/\/cafe\.naver\.com\/mixmasterau\/\d+$/);
+  const validateUrl = (value) => value.match(pattern);
 
   const isInvalid = useMemo(() => {
     if (urlValue === "") return false;
@@ -180,7 +182,7 @@ export const WriteButton = () => {
                     color={isInvalid ? "danger" : ""}
                     errorMessage={
                       isInvalid &&
-                      "올바른 형식 : https://cafe.naver.com/mixmasterau/[게시물번호]"
+                      "올바른 형식 : https://cafe.naver.com/mixmasterau/[게시물번호] or  OR https://cafe.naver.com/blade/[게시물번호]"
                     }
                     onValueChange={setUrlValue}
                     onChange={(e) =>

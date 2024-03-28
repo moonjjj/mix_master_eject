@@ -79,7 +79,6 @@ export default function DocsPage() {
                       href={elem.url}
                       color="foreground"
                       isExternal
-                      // className="flex flex-col items-start"
                     >
                       <h4 className="text-medium font-medium">{elem.title}</h4>
                       <p className="text-small text-default-400 mx-3">

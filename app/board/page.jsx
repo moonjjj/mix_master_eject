@@ -32,7 +32,7 @@ export default async function BoardPage() {
           <div className="space-y-1 flex justify-center flex-col items-start">
             <h4 className="text-medium font-medium">게시판</h4>
             <p className="text-small text-default-400">
-              모든 게시물은 네이버 호믹 공식카페와 연결됩니다.
+              모든 게시물은 네이버 호믹 공식카페 / 호믹 유저카페와 연결됩니다.
             </p>
           </div>
           <Divider className="my-4" />
