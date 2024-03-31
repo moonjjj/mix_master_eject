@@ -23,7 +23,7 @@ import axios from "axios";
 // };
 
 // export const writeApi2 = async () => {
-//   const client = await connectDB;
+//   const client = await connectDB;;
 //   const db = client.db("mixmaster");
 //   let result = await db.collection("forum").insertOne(writeValue);
 //   // return res.status(200).redirect("/board");
