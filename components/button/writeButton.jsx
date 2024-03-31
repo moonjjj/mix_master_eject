@@ -97,7 +97,7 @@ export const WriteButton = () => {
         //모달 닫아주고, 로딩 ui 켜주고, 리스트페이지 띄워주기
         // onClose;
         setLoading(false);
-        alert("글 작성에 성공했습니다!!");
+        alert("글 작성에 성공했습니다!!\n운영자의 검수 후 업로드됩니다.");
         window.location.reload();
         // router.push("/board");
       }
