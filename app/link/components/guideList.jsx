@@ -158,7 +158,7 @@ export const GuideList = () => {
           );
         })}
         <Divider />
-        <div className="mx-5 mt-10 flex items-start flex-col  w-full overflow-scroll">
+        <div className="mx-0 mt-10 flex items-start flex-col  w-full overflow-scroll">
           <Code size="lg" className="mb-5 font-bold">
             시작해보고 싶은데 어떻게 시작해야 되나요?
           </Code>
@@ -178,8 +178,7 @@ export const GuideList = () => {
             </Code>
             <br />
             <Code size="md">
-              호주믹스마스터는 예전 믹스마스터의 느낌이 있고, 템을 제작하는
-              재미가 있고,
+              호주믹스마스터는 템이나 코어를 직작하는 재미가 있고,
             </Code>
             <Code size="md">PVP 하는 재미가 있는 게임이라고 생각합니다.</Code>
             <Code size="md">
