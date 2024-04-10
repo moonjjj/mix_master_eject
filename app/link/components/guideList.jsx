@@ -58,6 +58,12 @@ const list = {
   ],
   forUserTip: [
     {
+      icon: "🧭",
+      title: "사냥터 맵정보",
+      subTitle: "주요 사냥터 정리 ( 출처 : 브레스 )",
+      url: "https://cafe.naver.com/blade?iframe_url=/ArticleList.nhn%3Fsearch.clubid=30658780%26search.menuid=38%26search.boardtype=L#",
+    },
+    {
       icon: "💎",
       title: "아이템 만드는 방법",
       subTitle: "장비 제작시 필요 아이템 정리 ( 출처 : Tenacity )",

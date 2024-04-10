@@ -10,16 +10,11 @@ const youtubeLink = [
     name: "무너진 밸런스가 캐시 아이템 수요를 만든다.",
     sourceBy: "(영상 출처 : 펭귄몬스터)",
   },
-  {
-    url: "https://www.youtube.com/embed/7Ucw19UMvFY",
-    name: "호주는 100레벨 코어가 귀하다는데.. 제가 대신 먹어보겠습니다~ [믹스마스터, 믹마]",
-    sourceBy: "(영상 출처 : 브레스)",
-  },
-  {
-    url: "https://www.youtube.com/embed/IGJtfRRUcX8",
-    name: "해외 랭킹 1위 유저는 무슨 혜택이 있을까?｜호주 믹마 랭커 초대석 1부 [믹스마스터]",
-    sourceBy: "(영상 출처 : 브레스)",
-  },
+  // {
+  //   url: "https://www.youtube.com/embed/IGJtfRRUcX8",
+  //   name: "해외 랭킹 1위 유저는 무슨 혜택이 있을까?｜호주 믹마 랭커 초대석 1부 [믹스마스터]",
+  //   sourceBy: "(영상 출처 : 브레스)",
+  // },
   {
     url: "https://www.youtube.com/embed/dIUK0BUOMOI",
     name: "믹스마스터 15년 경력, 혹시 이 게임을 기억하시나요..? BJ브레스 장인초대석 [테스터훈]",
@@ -29,6 +24,16 @@ const youtubeLink = [
     url: "https://www.youtube.com/embed/PbfKxrJh_2I",
     name: "믹스마스터가 절대 안망하는 이유.",
     sourceBy: "(영상 출처 : 아구 TV)",
+  },
+  {
+    url: "https://youtu.be/vjVM5zAVW_c?si=nRXFNMX0Foaq5E4Z",
+    name: "고인물 3명이 호주믹마 탐방가면 생기는 일 ㅋㅋ [믹스마스터]",
+    sourceBy: "(영상 출처 : 브레스)",
+  },
+  {
+    url: "https://www.youtube.com/embed/7Ucw19UMvFY",
+    name: "호주는 100레벨 코어가 귀하다는데.. 제가 대신 먹어보겠습니다~ [믹스마스터, 믹마]",
+    sourceBy: "(영상 출처 : 브레스)",
   },
 ];
 
