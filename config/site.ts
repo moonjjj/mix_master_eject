@@ -14,12 +14,12 @@ export const siteConfig = {
       href: "/mix_calculate",
     },
     {
-      label: "게시판",
-      href: "/board",
-    },
-    {
       label: "주요링크 및 가이드",
       href: "/link",
+    },
+    {
+      label: "게시판",
+      href: "/board",
     },
   ],
   navMenuItems: [
@@ -32,12 +32,12 @@ export const siteConfig = {
       href: "/mix_calculate",
     },
     {
-      label: "게시판",
-      href: "/board",
-    },
-    {
       label: "주요링크 및 가이드",
       href: "/link",
+    },
+    {
+      label: "게시판",
+      href: "/board",
     },
   ],
   links: {
