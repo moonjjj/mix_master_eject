@@ -14,6 +14,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
+  cn,
 } from "@nextui-org/react";
 
 // import { Button } from "@nextui-org/button";
@@ -38,6 +39,9 @@ import {
 } from "@/components/icons";
 
 export const Navbar = () => {
+  const iconClasses =
+    "text-xl text-default-500 pointer-events-none flex-shrink-0";
+
   // const searchInput = (
   //   <Input
   //     aria-label="Search"
@@ -138,29 +142,66 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu> */}
+      {/*  */}
       <Dropdown>
         <DropdownTrigger>
-          {/* <Button variant="bordered">패치노트</Button> */}
-          <NavbarMenuToggle />
+          <Button variant="bordered">메뉴</Button>
         </DropdownTrigger>
-        <DropdownMenu aria-label="Static Actions">
-          {/* <DropdownItem key="new">준비중입니다.</DropdownItem> */}
-          {siteConfig.navMenuItems.map((item, index) => (
-            <DropdownItem key={`${item}-${index}`}>
-              <Link
-                color={"foreground"}
-                href={item.href}
-                size="lg"
-                className="w-full"
-              >
-                {item.label}
-              </Link>
-            </DropdownItem>
-          ))}
 
-          {/* <DropdownItem key="delete" className="text-danger" color="danger"> */}
-          {/* Delete file */}
-          {/* </DropdownItem> */}
+        <DropdownMenu
+          variant="faded"
+          aria-label="Dropdown menu with description"
+        >
+          <DropdownItem
+            key="home"
+            shortcut="HOME"
+            description="메인페이지 👋"
+            showDivider
+            startContent={<span className={iconClasses}>👋</span>}
+            href="/"
+          >
+            홈
+          </DropdownItem>
+          <DropdownItem
+            key="calc"
+            shortcut="CALC"
+            description="믹스레벨 간편 계산기"
+            startContent={<span className={iconClasses}>✅</span>}
+            href="/mix_calculate"
+          >
+            계산기
+          </DropdownItem>
+          <DropdownItem
+            key="link"
+            shortcut="LINK"
+            description="간편 링크 모음"
+            startContent={<span className={iconClasses}>🔗</span>}
+            href="/link"
+          >
+            주요링크 및 가이드
+          </DropdownItem>
+          <DropdownItem
+            key="forum"
+            shortcut="FORUM"
+            // showDivider
+            description="육성에 도움되는 카페 글"
+            startContent={<span className={iconClasses}>💬</span>}
+            href="/board"
+          >
+            게시판
+          </DropdownItem>
+          {/* <DropdownItem
+            key="delete"
+            className="text-danger"
+            color="danger"
+            shortcut="⌘⇧D"
+            description="Permanently delete the file"
+            startContent={
+              <CheckIcon className={cn(iconClasses, "text-danger")} />
+            }
+          >
+            Delete file
+          </DropdownItem> */}
         </DropdownMenu>
       </Dropdown>
     </NextUINavbar>

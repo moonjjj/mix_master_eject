@@ -122,7 +122,7 @@ export const BoardList = ({ lists }) => {
           list.map((elem, idx) => (
             <div
               key={idx}
-              className="cursor-pointer flex items-center py-3 px-1 transition-all rounded-md border-b-1 border-slate-800 hover:bg-[#3f3f46] lg:pr-10"
+              className="cursor-pointer flex items-center py-3 px-1 transition-all rounded-md hover:bg-neutral-700 lg:pr-10"
             >
               <div className="flex items-center justify-between w-full">
                 <div className="flex items-center gap-3">
@@ -130,10 +130,10 @@ export const BoardList = ({ lists }) => {
                     showFallback
                     name={elem.icon}
                     size="lg"
-                    className="text-sm"
+                    className="text-sm bg-neutral-700"
                   />
                   <div className="flex flex-col gap-3 items-start justify-start lg:flex-row">
-                    <span className="text-base lg: text-2xl font-medium">
+                    <span className="text-base lg: text-2xl font-medium color-neutral-900">
                       {elem.title}
                     </span>
                     <span className="text-sm text-slate-500">{elem.date}</span>

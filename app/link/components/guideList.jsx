@@ -90,7 +90,7 @@ export const GuideList = () => {
               isBlock
               isExternal
               showAnchorIcon
-              className="cursor-pointer flex gap-3 items-center py-2 px-1 pr-10 transition-all rounded-md	 hover:bg-[#3f3f46]"
+              className="cursor-pointer flex gap-3 items-center py-2 px-1 pr-10 transition-all rounded-md	 hover:bg-neutral-700	"
               href={elem.url}
               color="foreground"
             >
@@ -98,10 +98,12 @@ export const GuideList = () => {
                 showFallback
                 name={elem.icon}
                 size="lg"
-                className="text-2xl"
+                className="text-2xl bg-neutral-700"
               />
               <div className="flex gap-3 items-end">
-                <span className="text-2xl font-medium">{elem.title}</span>
+                <span className="text-2xl font-medium color-neutral-900">
+                  {elem.title}
+                </span>
                 <span className="hidden lg:block text-sm text-slate-500	">
                   {elem.subTitle}
                 </span>

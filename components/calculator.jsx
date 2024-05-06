@@ -188,8 +188,7 @@ export const Calculator = () => {
             result.map((item, index) => (
               <div
                 key={index}
-                className="overflow-scroll gap-5 flex w-full justify-between items-center bg-zinc-800	py-3 px-5 mt-5 rounded-xl	"
-                // onScroll={onScroll}
+                className="overflow-scroll gap-5 flex w-full justify-between items-center	py-3 px-5 mt-5 rounded-xl border-2 border-stone-100"
               >
                 <div className="w-full">
                   <div className="flex">
@@ -332,9 +331,8 @@ export const Calculator = () => {
         </div>
         <div className="w-full my-5">
           <Button
-            color="primary"
             startContent={<SearchIcon />}
-            className="w-full text-large text-default-900"
+            className="w-full text-large text-default-900 bg-blue-400"
             onClick={getResultFnc}
           >
             믹스

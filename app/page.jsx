@@ -92,7 +92,7 @@ export default function Home() {
         <Youtube />
 
         <br />
-
+        {/* 
         <div>
           <Link
             isBlock
@@ -112,7 +112,7 @@ export default function Home() {
           >
             유튜브 플레이어 삽입 관련 조항2
           </Link>
-        </div>
+        </div> */}
         <Code size="sm">
           <span>문의 : 우측하단 채널톡</span>
         </Code>
